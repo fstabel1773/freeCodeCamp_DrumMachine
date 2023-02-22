@@ -20,7 +20,7 @@ export default [
     url: "https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3",
   },
   {
-    id: "D",
+    id: "S",
     description: "Clap",
     url: "https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3",
   },
@@ -30,7 +30,7 @@ export default [
     url: "https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3",
   },
   {
-    id: "Z", // german: "Y"
+    id: "Y", // german: "Y"
     description: "Kick-n'-Hat",
     url: "https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3",
   },
