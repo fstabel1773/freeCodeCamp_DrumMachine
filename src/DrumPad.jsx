@@ -3,19 +3,19 @@ import React, { useEffect, useRef } from 'react'
 
 function Drumpad(props) {
     const {drum, drumPattern, handleDrum} = props
-    const audioElt = useRef()
+    // const audioElt = useRef()
 
-    useEffect(() => {
-        playSound()
-    }, [drumPattern])
+    // useEffect(() => {
+    //     playSound()
+    // }, [drumPattern])
 
-    function playSound() {
-        const latestDrum = drumPattern[drumPattern.length - 1]
-        if (latestDrum && 
-            drum.description === latestDrum.description) {
-            audioElt.current.play()
-            }
-    }
+    // function playSound() {
+    //     const latestDrum = drumPattern[drumPattern.length - 1]
+    //     if (latestDrum && 
+    //         drum.description === latestDrum.description) {
+    //         audioElt.current.play()
+    //         }
+    // }
 
     return (
         <button 
@@ -26,7 +26,8 @@ function Drumpad(props) {
                 id={drum.id === "Y" ? "Z" : drum.id}
                 src={drum.url} 
                 className="clip"
-                ref={audioElt}>
+                // ref={audioElt}
+                >
             </audio>
             {drum.id === "Y" ? "Z" : drum.id}
         </button>
