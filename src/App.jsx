@@ -8,11 +8,6 @@ function App() {
   const [drumPattern, setDrumPattern] = useState([])
   const keyDown = useRef(null)
 
-  // handling keyDown
-  // useEffect(() => {
-  //   keyDown.current.focus()
-  // }, [drumPattern])
-
   function handleKeyDown(event) {
     drumData.forEach(drum => {
       drum.id === event.key.toUpperCase() ? handleDrum(drum.description) : {}
@@ -21,7 +16,7 @@ function App() {
 
   function handleDrum(desc) {
     const matchingDrum = drumData.find(drum => drum.description === desc)
-    // setDrumPattern(prevDrumPattern => [...prevDrumPattern, matchingDrum])
+    setDrumPattern(prevDrumPattern => [...prevDrumPattern, matchingDrum])
     let audio = new Audio(matchingDrum.url)
     audio.play()
   }
