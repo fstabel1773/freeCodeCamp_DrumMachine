@@ -44,8 +44,7 @@ function App() {
         className="drum-pad 
           btn btn-lg btn-outline-warning
           border-2
-          py-4
-          "
+          py-4"
         onClick={() => handleDrum(drum.description)} >
         <audio 
           id={drum.id}
@@ -58,22 +57,10 @@ function App() {
     )
   })
 
-  // necessary step for bootstrap-grid
-  // const drumPadRows = [0, 3, 6].map(num => {
-  //   return (
-  //     <div className="row border">
-  //       {drumPads.filter((drumPad, index) => {
-  //         return index >= num && index < num + 3
-  //       } )}
-  //     </div>
-  //   )
-  // })
-
   return (
     <div id="App-Wrapper" className="
       vh-100 bg-dark 
-      d-flex justify-content-center align-items-center flex-column
-      " 
+      d-flex justify-content-center align-items-center flex-column" 
       tabIndex={0} ref={keyDown} onKeyDown={(event) => handleKeyDown(event)}>
 
       <h1 className="text-warning d-block mb-4 display-1"><b>Drum Machine</b></h1>  
@@ -81,24 +68,28 @@ function App() {
         border border-5 border border-warning rounded
         d-flex align-items-center flex-column flex-md-row justify-content-around
         p-4 m-3
-        container
-        ">
+        container">
 
         <div id="drumpad-grid" className="w-50" ref={key}>
           {drumPads}
         </div>
 
-        <div id="setting-grid" className="h-100 w-50 mt-3 d-flex f-gap-2 flex-column justify-content-between container">
+        <div id="setting-grid" className="h-75 w-50 mt-3 
+          d-flex flex-column justify-content-around 
+          container">
           
           <div className="d-flex justify-content-end py-3">
-            <div className="text-warning me-2">Off</div>
-
-            <div className="form-check form-switch">
-              <input className="form-check-input opacity-10 bg-warning border border-warning" type="checkbox" role="switch" id="flexSwitchCheckDefault" ref={power} onChange={togglePower} checked={isOn ? true : false } ></input>
-              <label className="form-check-label" htmlFor="flexSwitchCheckDefault"></label>
-            </div>
-
-            <div className="text-warning">On</div>
+            <h4 className="form-check form-switch ">
+              <input 
+                className="form-check-input opacity-10 bg-warning border border-warning" 
+                type="checkbox" role="switch" 
+                id="flexSwitchCheckDefault" 
+                onChange={togglePower} 
+                checked={isOn ? true : false } ></input>
+              <label 
+                className="form-check-label text-warning" 
+                htmlFor="flexSwitchCheckDefault">On/Off</label>
+            </h4>
           </div>
 
           <h4 id="display" className="text-dark text-center bg-warning ms-3 py-2 rounded lh-2 ">
