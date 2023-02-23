@@ -1,3 +1,5 @@
+
+
 * {
   box-sizing: border-box;
 }
@@ -8,55 +10,13 @@ body {
   padding: 0
 }
 
-body {
-  color: whitesmoke;
-}
-
-
-#App-Wrapper {
-  background-color: black;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 #drum-machine {
-  width: 700px;
-  height: 500px;
-  margin: 0 5em 0;
-  padding: 0.5em;
-  border: 1px solid whitesmoke;
-  display: flex;
-  gap: 1em;
+  max-width: 750px;
 }
 
 #drumpad-grid {
-  width: 60%;
-  padding: 1em;
   display: grid;
   grid-gap: 0.4em;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, fr);
-}
-
-
-#setting-grid {
-  width: 40%;
-  padding: 1em;
-  border: 1px solid white;
-  text-align: center;
-  display: flex;
-  align-items: center;
-}
-
-.drum-pad:active {
-  background-color: darkgoldenrod;
-}
-
-#display {
-  width: 100%;
-  padding: 0.5em;
-  color: black;
-  background-color: lightgrey;
 }
